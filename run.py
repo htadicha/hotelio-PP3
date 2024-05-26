@@ -184,7 +184,7 @@ class HotelBillCalculator:
         print("5. Girl Suit -----> euro 8")
         print("6. Exit")
 # set the input to be integers and add value error using the while true statement.
-# make sure the input is only integer and takes numbers from 1-6,  ensure choices is always greater than 0
+# make sure the input is only integer and takes numbers from 1-6,  ensure quantity is always greater than 0
 # set 6 to be an exit, hence breaks
         while True:
              try:
@@ -194,7 +194,13 @@ class HotelBillCalculator:
                 if choice not in [1, 2, 3, 4, 5, 6]:
                    print("Invalid choice. Please choose a valid laundry item.")
                    continue
+# add conditions for the input to always be greater than 0 for quantity
+                quantity = int(input("Enter the quantity: ").strip())
+                if quantity <= 0:
+                   print("Quantity must be greater than 0.")
+                   continue
 
+                
              except ValueError:
                   print("Invalid input. Please enter valid numbers.")
               
