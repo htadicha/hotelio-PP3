@@ -121,14 +121,15 @@ class HotelBillCalculator:
             self.room_rent = 30 * nights
 
         print("Your room rent is: euro", self.room_rent, "\n")
-# next we will calculate the restaurant bill e.g food, water
+
+    # next we will calculate the restaurant bill e.g food, water
     def calculate_restaurant_bill(self):
         """
         The restaurant bill will help us understand the cost of food and water at different mill time
         we will have 1-6 options and validate the numbers and have 6 break the loop as it will be used as exit
         1. Calculates the restaurant bill based on the items ordered and their quantities.
         2. Presents a menu of food items with corresponding charges.
-        """ 
+        """
         print("*****RESTAURANT MENU*****")
         print("1. Water -----> euro 2")
         print("2. Tea ----->  euro 3")
@@ -136,36 +137,49 @@ class HotelBillCalculator:
         print("4. Lunch -----> euro 30")
         print("5. Dinner -----> euro 50")
         print("6. Exit")
-# exception handling for invalide number input
-# number has to be between 1-6, 6 breaks and restart the choices
-# ensure that quantity is always greater than 0
-# ensure input is integer
+        # exception handling for invalide number input
+        # number has to be between 1-6, 6 breaks and restart the choices
+        # ensure that quantity is always greater than 0
+        # ensure input is integer
         while True:
-           try:
-               choice = int(input("Enter your choice: ").strip())
-               if choice == 6:
-                   break
-               if choice not in [1, 2, 3, 4, 5, 6]:
-                   print("Invalid choice. Please choose a valid menu item.")
-                   continue
-               quantity = int(input("Enter the quantity: ").strip())
-               if quantity <= 0:
-                   print("Quantity must be greater than 0.")
-                   continue
-           except ValueError:
-               print("Invalid input. Please enter valid numbers.")
-               continue
+            try:
+                choice = int(input("Enter your choice: ").strip())
+                if choice == 6:
+                    break
+                if choice not in [1, 2, 3, 4, 5, 6]:
+                    print("Invalid choice. Please choose a valid menu item.")
+                    continue
+                quantity = int(input("Enter the quantity: ").strip())
+                if quantity <= 0:
+                    print("Quantity must be greater than 0.")
+                    continue
+            except ValueError:
+                print("Invalid input. Please enter valid numbers.")
+                continue
 
-        
-# build flow for choices to be calculated for restaurant food and water bills during different meal time.
-           if choice == 1:
-               self.food_bill += 2 * quantity
-           elif choice == 2:
-               self.food_bill += 3 * quantity
-           elif choice == 3:
-               self.food_bill += 20 * quantity
-           elif choice == 4:
-               self.food_bill += 30 * quantity
-           elif choice == 5:
-               self.food_bill += 50 * quantity
+            # build flow for choices to be calculated for restaurant food and water bills during different meal time.
+            if choice == 1:
+                self.food_bill += 2 * quantity
+            elif choice == 2:
+                self.food_bill += 3 * quantity
+            elif choice == 3:
+                self.food_bill += 20 * quantity
+            elif choice == 4:
+                self.food_bill += 30 * quantity
+            elif choice == 5:
+                self.food_bill += 50 * quantity
         print("Total food cost: Rs", self.food_bill, "\n")
+
+    # we will calculate laundary bill in the next lines
+    def calculate_laundry_bill(self):
+        """
+        1. Calculates the laundry bill based on the items laundered and their quantities
+        2.Presents a menu of laundry items with corresponding charges.
+        """
+        print("******LAUNDRY MENU*******")
+        print("1. Shorts -----> euro 3")
+        print("2. Trousers -----> euro 4")
+        print("3. Shirt -----> euro 5")
+        print("4. Jeans -----> euro 6")
+        print("5. Girl Suit -----> euro 8")
+        print("6. Exit")
