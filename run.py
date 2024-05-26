@@ -23,3 +23,40 @@ class HotelBillCalculator:
        self.check_in_date = check_in_date
        self.check_out_date = check_out_date
        self.room_number = room_number
+       
+    #    build input data for collecting customer data
+   def input_data(self):
+        """
+        initiallizse collection of customer data such as name, address, check-in date, and check-out date.
+        later in the code we will ensure the information provided for the above customer data are valide inputs for each
+        
+        """
+        self.customer_name = input("\nEnter your name: ").strip()
+        while not self.customer_name:
+           print("Name cannot be empty.")
+           self.customer_name = input("\nEnter your name: ").strip()
+
+
+        self.customer_address = input("\nEnter your address: ").strip()
+        while not self.customer_address:
+           print("Address cannot be empty.")
+           self.customer_address = input("\nEnter your address: ").strip()
+
+
+        self.check_in_date = input("\nEnter your check-in date: ").strip()
+        while not self.check_in_date:
+           print("Check-in date cannot be empty.")
+           self.check_in_date = input("\nEnter your check-in date: ").strip()
+
+
+        self.check_out_date = input("\nEnter your check-out date: ").strip()
+        while not self.check_out_date:
+           print("Check-out date cannot be empty.")
+           self.check_out_date = input("\nEnter your check-out date: ").strip()
+
+
+        print("Your room number: ", self.room_number, "\n")
+
+
+
+
