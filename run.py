@@ -90,3 +90,14 @@ class HotelBillCalculator:
                 print("Invalid input. Please enter a number between 1 and 4.")
                 
         #    set the valid number of nights to be always greater than 0
+        while True:
+           try:
+               nights = int(input("For how many nights did you stay: ").strip())
+               if nights <= 0:
+                   print("Number of nights must be greater than 0.")
+                   continue
+               break
+           except ValueError:
+               print("Invalid input. Please enter a valid number of nights.")
+               
+# set the control flow for choices taken by user if choices are from 1-4
