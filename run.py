@@ -183,3 +183,15 @@ class HotelBillCalculator:
         print("4. Jeans -----> euro 6")
         print("5. Girl Suit -----> euro 8")
         print("6. Exit")
+# set the input to be integers and add value error using the while true statement.
+# make sure the input is only integer and takes numbers from 1-6,  ensure choices is always greater than 0
+# set 6 to be an exit, hence breaks
+        while True:
+             try:
+                choice = int(input("Enter your choice: ").strip())
+                if choice == 6:
+                   break
+                if choice not in [1, 2, 3, 4, 5, 6]:
+                   print("Invalid choice. Please choose a valid laundry item.")
+                   continue
+
