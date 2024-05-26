@@ -139,6 +139,7 @@ class HotelBillCalculator:
 # exception handling for invalide number input
 # number has to be between 1-6, 6 breaks and restart the choices
 # ensure that quantity is always greater than 0
+# ensure input is integer
         while True:
            try:
                choice = int(input("Enter your choice: ").strip())
@@ -156,3 +157,15 @@ class HotelBillCalculator:
                continue
 
         
+# build flow for choices to be calculated for restaurant food and water bills during different meal time.
+           if choice == 1:
+               self.food_bill += 2 * quantity
+           elif choice == 2:
+               self.food_bill += 3 * quantity
+           elif choice == 3:
+               self.food_bill += 20 * quantity
+           elif choice == 4:
+               self.food_bill += 30 * quantity
+           elif choice == 5:
+               self.food_bill += 50 * quantity
+        print("Total food cost: Rs", self.food_bill, "\n")
