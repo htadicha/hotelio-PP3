@@ -57,6 +57,7 @@ class HotelBillCalculator:
 
         print("Your room number: ", self.room_number, "\n")
 
+# at each stage runninng the code to ensure we don't have majore typo or indentation error
 
 
 
