@@ -27,7 +27,7 @@ class HotelBillCalculator:
     #    build input data for collecting customer data
    def input_data(self):
         """
-        initiallizse collection of customer data such as name, address, check-in date, and check-out date.
+        input method for collection of customer data such as name, address, check-in date, and check-out date.
         later in the code we will ensure the information provided for the above customer data are valide inputs for each
         
         """
@@ -60,4 +60,8 @@ class HotelBillCalculator:
 # at each stage runninng the code to ensure we don't have majore typo or indentation error
 
 
-
+   def calculate_room_rent(self):    
+""" - Method to:
+1. Calculates the room rent based on the room type selected and the number of nights stayed.
+2. Presents a menu of room types with corresponding charges per night.
+    """
