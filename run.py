@@ -6,6 +6,7 @@
 #  make sure you follow the grading criteria for proper grading and submission
 # Github pages doesn't support python for deployment, so ensure you have good understand of how to deploy on Heroku in the module.
 
+
 class HotelBillCalculator:
     """
     A class to calculate hotel bills for room rent, restaurant, laundry, and game services.
@@ -93,16 +94,65 @@ class HotelBillCalculator:
                 break
             except ValueError:
                 print("Invalid input. Please enter a number between 1 and 4.")
-                
+
         #    set the valid number of nights to be always greater than 0
         while True:
+            try:
+                nights = int(input("For how many nights did you stay: ").strip())
+                if nights <= 0:
+                    print("Number of nights must be greater than 0.")
+                    continue
+                break
+            except ValueError:
+                print("Invalid input. Please enter a valid number of nights.")
+
+        # set the control flow for choices taken by user if choices are from 1-4
+        if choice == 1:
+            print("You have opted for room type A")
+            self.room_rent = 60 * nights
+        elif choice == 2:
+            print("You have opted for room type B")
+            self.room_rent = 50 * nights
+        elif choice == 3:
+            print("You have opted for room type C")
+            self.room_rent = 40 * nights
+        elif choice == 4:
+            print("You have opted for room type D")
+            self.room_rent = 30 * nights
+
+        print("Your room rent is: euro", self.room_rent, "\n")
+# next we will calculate the restaurant bill e.g food, water
+    def calculate_restaurant_bill(self):
+        """
+        The restaurant bill will help us understand the cost of food and water at different mill time
+        we will have 1-6 options and validate the numbers and have 6 break the loop as it will be used as exit
+        1. Calculates the restaurant bill based on the items ordered and their quantities.
+        2. Presents a menu of food items with corresponding charges.
+        """ 
+        print("*****RESTAURANT MENU*****")
+        print("1. Water -----> euro 2")
+        print("2. Tea ----->  euro 3")
+        print("3. Breakfast Combo -----> euro 20")
+        print("4. Lunch -----> euro 30")
+        print("5. Dinner -----> euro 50")
+        print("6. Exit")
+# exception handling for invalide number input
+# number has to be between 1-6, 6 breaks and restart the choices
+# ensure that quantity is always greater than 0
+        while True:
            try:
-               nights = int(input("For how many nights did you stay: ").strip())
-               if nights <= 0:
-                   print("Number of nights must be greater than 0.")
+               choice = int(input("Enter your choice: ").strip())
+               if choice == 6:
+                   break
+               if choice not in [1, 2, 3, 4, 5, 6]:
+                   print("Invalid choice. Please choose a valid menu item.")
                    continue
-               break
+               quantity = int(input("Enter the quantity: ").strip())
+               if quantity <= 0:
+                   print("Quantity must be greater than 0.")
+                   continue
            except ValueError:
-               print("Invalid input. Please enter a valid number of nights.")
-               
-# set the control flow for choices taken by user if choices are from 1-4
+               print("Invalid input. Please enter valid numbers.")
+               continue
+
+        
