@@ -199,8 +199,19 @@ class HotelBillCalculator:
                 if quantity <= 0:
                    print("Quantity must be greater than 0.")
                    continue
-
-                
              except ValueError:
                   print("Invalid input. Please enter valid numbers.")
-              
+# setting the choices for 1-6 and multiplying by quantity
+             if choice == 1:
+               self.laundry_bill += 3 * quantity
+             elif choice == 2:
+               self.laundry_bill += 4 * quantity
+             elif choice == 3:
+               self.laundry_bill += 5 * quantity
+             elif choice == 4:
+               self.laundry_bill += 6 * quantity
+             elif choice == 5:
+               self.laundry_bill += 8 * quantity
+
+
+        print("Total laundry cost: Rs", self.laundry_bill, "\n")
