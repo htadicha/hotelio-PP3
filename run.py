@@ -1,6 +1,11 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+# prerequisites:
+# 1. ensure you have all the required information e.g currency
+# 2. understand OOP elements of python from CI modules
+# 3. understand python maths concepts like +, * and addition to add all the required grand totals
+#  after project is complete go back and make sure you have correct spelling for your docustrings and comments
+#  make sure you follow the grading criteria for proper grading and submission
+# Github pages doesn't support python for deployment, so ensure you have good understand of how to deploy on Heroku in the module.
+
 class HotelBillCalculator:
     """
     A class to calculate hotel bills for room rent, restaurant, laundry, and game services.
