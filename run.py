@@ -195,3 +195,6 @@ class HotelBillCalculator:
                    print("Invalid choice. Please choose a valid laundry item.")
                    continue
 
+             except ValueError:
+                  print("Invalid input. Please enter valid numbers.")
+              
