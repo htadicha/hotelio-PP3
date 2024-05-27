@@ -183,39 +183,39 @@ class HotelBillCalculator:
         print("4. Jeans -----> euro 6")
         print("5. Girl Suit -----> euro 8")
         print("6. Exit")
-# set the input to be integers and add value error using the while true statement.
-# make sure the input is only integer and takes numbers from 1-6,  ensure quantity is always greater than 0
-# set 6 to be an exit, hence breaks
+        # set the input to be integers and add value error using the while true statement.
+        # make sure the input is only integer and takes numbers from 1-6,  ensure quantity is always greater than 0
+        # set 6 to be an exit, hence breaks
         while True:
-             try:
+            try:
                 choice = int(input("Enter your choice: ").strip())
                 if choice == 6:
-                   break
+                    break
                 if choice not in [1, 2, 3, 4, 5, 6]:
-                   print("Invalid choice. Please choose a valid laundry item.")
-                   continue
-# add conditions for the input to always be greater than 0 for quantity
+                    print("Invalid choice. Please choose a valid laundry item.")
+                    continue
+                # add conditions for the input to always be greater than 0 for quantity
                 quantity = int(input("Enter the quantity: ").strip())
                 if quantity <= 0:
-                   print("Quantity must be greater than 0.")
-                   continue
-             except ValueError:
-                  print("Invalid input. Please enter valid numbers.")
-# setting the choices for 1-6 and multiplying by quantity
-             if choice == 1:
-               self.laundry_bill += 3 * quantity
-             elif choice == 2:
-               self.laundry_bill += 4 * quantity
-             elif choice == 3:
-               self.laundry_bill += 5 * quantity
-             elif choice == 4:
-               self.laundry_bill += 6 * quantity
-             elif choice == 5:
-               self.laundry_bill += 8 * quantity
-               
+                    print("Quantity must be greater than 0.")
+                    continue
+            except ValueError:
+                print("Invalid input. Please enter valid numbers.")
+            # setting the choices for 1-6 and multiplying by quantity
+            if choice == 1:
+                self.laundry_bill += 3 * quantity
+            elif choice == 2:
+                self.laundry_bill += 4 * quantity
+            elif choice == 3:
+                self.laundry_bill += 5 * quantity
+            elif choice == 4:
+                self.laundry_bill += 6 * quantity
+            elif choice == 5:
+                self.laundry_bill += 8 * quantity
+
         print("Total laundry cost: Rs", self.laundry_bill, "\n")
-        
-# calculating game bill next
+
+    # calculating game bill next
     def calculate_game_bill(self):
         """
         1. Calculates the game bill based on the games played and hours spent.
@@ -228,18 +228,24 @@ class HotelBillCalculator:
         print("4. Video Games -----> euro 35 per hour")
         print("5. Pool -----> euro 50 per hour")
         print("6. Exit")
-#  will set up the game  bill to have similar condition as the rest of the bills
-# 1. must be an integer
-# The game choices should be 1-6
-# Number of hours must also be > 0
+        #  will set up the game  bill to have similar condition as the rest of the bills
+        # 1. must be an integer
+        # The game choices should be 1-6
+        # Number of hours must also be > 0
         while True:
-             try:
-               choice = int(input("Enter your choice: ").strip())
-               if choice == 6:
-                   break
-               if choice not in [1, 2, 3, 4, 5, 6]:
-                   print("Invalid choice. Please choose a valid game.")
-                   continue
-             except ValueError:
-               print("Invalid input. Please enter valid numbers.")
-               continue
+            try:
+                choice = int(input("Enter your choice: ").strip())
+                if choice == 6:
+                    break
+                if choice not in [1, 2, 3, 4, 5, 6]:
+                    print("Invalid choice. Please choose a valid game.")
+                    continue
+
+                # Adding conditons for hour value to always be greater than 0
+                hours = int(input("Enter the number of hours: ").strip())
+                if hours <= 0:
+                    print("Number of hours must be greater than 0.")
+                    continue
+            except ValueError:
+                print("Invalid input. Please enter valid numbers.")
+                continue
