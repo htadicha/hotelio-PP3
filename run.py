@@ -212,6 +212,19 @@ class HotelBillCalculator:
                self.laundry_bill += 6 * quantity
              elif choice == 5:
                self.laundry_bill += 8 * quantity
-
-
+               
         print("Total laundry cost: Rs", self.laundry_bill, "\n")
+        
+# calculating game bill next
+    def calculate_game_bill(self):
+        """
+        1. Calculates the game bill based on the games played and hours spent.
+        2. Presents a menu of games with corresponding charges per hour.
+        """
+        print("******GAME MENU*******")
+        print("1. Table Tennis -----> euro 15 per hour")
+        print("2. Bowling -----> euro 20 per hour")
+        print("3. Snooker -----> euro 25 per hour")
+        print("4. Video Games -----> euro 35 per hour")
+        print("5. Pool -----> euro 50 per hour")
+        print("6. Exit")
