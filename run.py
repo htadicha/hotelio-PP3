@@ -228,3 +228,18 @@ class HotelBillCalculator:
         print("4. Video Games -----> euro 35 per hour")
         print("5. Pool -----> euro 50 per hour")
         print("6. Exit")
+#  will set up the game  bill to have similar condition as the rest of the bills
+# 1. must be an integer
+# The game choices should be 1-6
+# Number of hours must also be > 0
+        while True:
+             try:
+               choice = int(input("Enter your choice: ").strip())
+               if choice == 6:
+                   break
+               if choice not in [1, 2, 3, 4, 5, 6]:
+                   print("Invalid choice. Please choose a valid game.")
+                   continue
+             except ValueError:
+               print("Invalid input. Please enter valid numbers.")
+               continue
