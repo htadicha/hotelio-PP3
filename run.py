@@ -278,6 +278,7 @@ class HotelBillCalculator:
        print("Food Bill:", self.food_bill)
        print("Laundry Bill:", self.laundry_bill)
        print("Game Bill:", self.game_bill)
+#  total bill added at the end of the  to ensure charges for all the bills in the hotel is included.
 
 
        self.total_bill = self.room_rent + self.food_bill + self.laundry_bill + self.game_bill
@@ -288,4 +289,4 @@ class HotelBillCalculator:
        print("Grand Total Bill:", self.total_bill + self.additional_charges, "\n")
        self.room_number += 1
        
-       
+# main function to run the calculator to be added to print customer details, room bill, restaurant bill, game bull and total cost
