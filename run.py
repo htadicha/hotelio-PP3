@@ -306,3 +306,9 @@ def main():
         print("5. Calculate Game Bill")
         print("6. Show Total Cost")
         print("7. EXIT")
+        # next validation has to be added to ensure the added inputs are valid inputs and should always be integer
+        try:
+            choice = int(input("\nEnter your choice: ").strip())
+        except ValueError:
+            print("Invalid input. Please enter a number between 1 and 7.")
+            continue
