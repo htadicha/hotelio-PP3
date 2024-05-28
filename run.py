@@ -29,7 +29,7 @@ class HotelBillCalculator:
         """
         Initialise the HotelBillCalculator with default or provided values.
         """
-        print("\n\nWelcome to Moyale Hotel\n")
+        print("\n\nWelcome to Moyale Hotel: please enter your choice below to view total bill\n")
         self.room_type = room_type
         self.food_bill = food_bill
         self.game_bill = game_bill
