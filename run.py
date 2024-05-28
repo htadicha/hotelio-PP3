@@ -262,31 +262,47 @@ class HotelBillCalculator:
                 self.game_bill += 50 * hours
 
         print("Total game cost: Euro", self.game_bill, "\n")
-# adding the calculator for hotel bills including charges
+
+    # adding the calculator for hotel bills including charges
     def display_bill(self):
-       """
-       Display the total hotel bill including all charges.
-       """
-       print("******HOTEL BILL******")
-       print("Customer Details:")
-       print("Customer Name:", self.customer_name)
-       print("Customer Address:", self.customer_address)
-       print("Check-in Date:", self.check_in_date)
-       print("Check-out Date:", self.check_out_date)
-       print("Room Number:", self.room_number)
-       print("Room Rent:", self.room_rent)
-       print("Food Bill:", self.food_bill)
-       print("Laundry Bill:", self.laundry_bill)
-       print("Game Bill:", self.game_bill)
-#  total bill added at the end of the  to ensure charges for all the bills in the hotel is included.
+        """
+        Display the total hotel bill including all charges.
+        """
+        print("******HOTEL BILL******")
+        print("Customer Details:")
+        print("Customer Name:", self.customer_name)
+        print("Customer Address:", self.customer_address)
+        print("Check-in Date:", self.check_in_date)
+        print("Check-out Date:", self.check_out_date)
+        print("Room Number:", self.room_number)
+        print("Room Rent:", self.room_rent)
+        print("Food Bill:", self.food_bill)
+        print("Laundry Bill:", self.laundry_bill)
+        print("Game Bill:", self.game_bill)
+        #  total bill added at the end of the  to ensure charges for all the bills in the hotel is included.
+
+        self.total_bill = (
+            self.room_rent + self.food_bill + self.laundry_bill + self.game_bill
+        )
+
+        print("Sub Total Bill:", self.total_bill)
+        print("Additional Service Charges:", self.additional_charges)
+        print("Grand Total Bill:", self.total_bill + self.additional_charges, "\n")
+        self.room_number += 1
 
 
-       self.total_bill = self.room_rent + self.food_bill + self.laundry_bill + self.game_bill
-
-
-       print("Sub Total Bill:", self.total_bill)
-       print("Additional Service Charges:", self.additional_charges)
-       print("Grand Total Bill:", self.total_bill + self.additional_charges, "\n")
-       self.room_number += 1
-       
 # main function to run the calculator to be added to print customer details, room bill, restaurant bill, game bull and total cost
+def main():
+    """
+    Main function to run the hotel bill calculator.
+    """
+    hotel_calculator = HotelBillCalculator()
+
+    while True:
+        print("1. Enter Customer Data")
+        print("2. Calculate Room Rent")
+        print("3. Calculate Restaurant Bill")
+        print("4. Calculate Laundry Bill")
+        print("5. Calculate Game Bill")
+        print("6. Show Total Cost")
+        print("7. EXIT")
