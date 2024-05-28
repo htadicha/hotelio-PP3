@@ -312,3 +312,26 @@ def main():
         except ValueError:
             print("Invalid input. Please enter a number between 1 and 7.")
             continue
+# validate the choices to print out the bill calculator based on choices made.`
+
+
+        if choice == 1:
+           hotel_calculator.input_data()
+        elif choice == 2:
+           hotel_calculator.calculate_room_rent()
+        elif choice == 3:
+           hotel_calculator.calculate_restaurant_bill()
+        elif choice == 4:
+           hotel_calculator.calculate_laundry_bill()
+        elif choice == 5:
+           hotel_calculator.calculate_game_bill()
+        elif choice == 6:
+           hotel_calculator.display_bill()
+        elif choice == 7:
+           break
+        else:
+           print("Invalid choice. Please enter a number between 1 and 7.")
+
+
+if __name__ == "__main__":
+   main()
