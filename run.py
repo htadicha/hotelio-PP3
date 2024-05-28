@@ -249,3 +249,16 @@ class HotelBillCalculator:
             except ValueError:
                 print("Invalid input. Please enter valid numbers.")
                 continue
+            # add the choices to be selected for hourly rate multiplication
+            if choice == 1:
+                self.game_bill += 15 * hours
+            elif choice == 2:
+                self.game_bill += 20 * hours
+            elif choice == 3:
+                self.game_bill += 25 * hours
+            elif choice == 4:
+                self.game_bill += 35 * hours
+            elif choice == 5:
+                self.game_bill += 50 * hours
+
+        print("Total game cost: Rs", self.game_bill, "\n")
