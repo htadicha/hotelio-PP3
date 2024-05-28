@@ -29,7 +29,7 @@ class HotelBillCalculator:
         """
         Initialise the HotelBillCalculator with default or provided values.
         """
-        print("\n\n*****WELCOME TO HEWING HOTEL*****\n")
+        print("\n\nWelcome to Moyale Hotel\n")
         self.room_type = room_type
         self.food_bill = food_bill
         self.game_bill = game_bill
@@ -130,7 +130,7 @@ class HotelBillCalculator:
         1. Calculates the restaurant bill based on the items ordered and their quantities.
         2. Presents a menu of food items with corresponding charges.
         """
-        print("*****RESTAURANT MENU*****")
+        print("RESTAURANT MENU")
         print("1. Water -----> euro 2")
         print("2. Tea ----->  euro 3")
         print("3. Breakfast Combo -----> euro 20")
@@ -176,7 +176,7 @@ class HotelBillCalculator:
         1. Calculates the laundry bill based on the items laundered and their quantities
         2.Presents a menu of laundry items with corresponding charges.
         """
-        print("******LAUNDRY MENU*******")
+        print("LAUNDRY MENU")
         print("1. Shorts -----> euro 3")
         print("2. Trousers -----> euro 4")
         print("3. Shirt -----> euro 5")
@@ -221,7 +221,7 @@ class HotelBillCalculator:
         1. Calculates the game bill based on the games played and hours spent.
         2. Presents a menu of games with corresponding charges per hour.
         """
-        print("******GAME MENU*******")
+        print("GAME MENU")
         print("1. Table Tennis -----> euro 15 per hour")
         print("2. Bowling -----> euro 20 per hour")
         print("3. Snooker -----> euro 25 per hour")
@@ -268,7 +268,7 @@ class HotelBillCalculator:
         """
         Display the total hotel bill including all charges.
         """
-        print("******HOTEL BILL******")
+        print("HOTEL BILL")
         print("Customer Details:")
         print("Customer Name:", self.customer_name)
         print("Customer Address:", self.customer_address)
