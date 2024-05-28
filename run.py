@@ -261,7 +261,7 @@ class HotelBillCalculator:
             elif choice == 5:
                 self.game_bill += 50 * hours
 
-        print("Total game cost: Rs", self.game_bill, "\n")
+        print("Total game cost: Euro", self.game_bill, "\n")
 # adding the calculator for hotel bills including charges
     def display_bill(self):
        """
