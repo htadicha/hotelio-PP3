@@ -12,6 +12,24 @@ example:
 
 ![alt text](gallery/app_initialize.png)
 
+## UX/UI Design of the Hotel Bill Calculator App
+1. User Experience (UX) Considerations:
+
+- __Clarity and Simplicity:__ The app follows a command-line interface (CLI) which ensures that the user is guided through each step with clear instructions. The sequential nature of the inputs helps users stay focused on one task at a time without feeling overwhelmed.
+
+- __Error Handling:__ The app includes robust error handling for invalid inputs, ensuring that users are prompted to correct their mistakes. This prevents frustration and enhances the overall user experience.
+
+- __Feedback:__ Each action, such as entering customer data or calculating a specific bill, provides immediate feedback, reinforcing correct actions and helping users understand the results of their inputs.
+
+- __Consistency:__ The app maintains a consistent format for all input prompts and output displays, making it easier for users to predict how to interact with the system.
+
+2. User Interface (UI) Considerations:
+
+- __Text-Based Interface:__ As a CLI app, the UI is minimalistic, relying on text-based inputs and outputs. This is effective for simplicity and quick navigation through different options.
+
+- __Menu Structure:__ The main menu offers a clear and straightforward list of options, making it easy for users to select the action they want to perform. Sub-menus and prompts are also clearly defined.
+
+- __Readability:__ The text is simple and concise, ensuring that users can easily read and understand the information presented. The use of line breaks and spacing helps to separate different sections of the output for better readability.
 
 ### Features
 1. __Customer Data Collection:__
@@ -90,8 +108,6 @@ The main function that runs the Hotel Bill Calculator. It provides a menu-driven
 6. Show total cost
 7. Exit the application
 
-
-
 ## Menu Options:
 Below is the main option and also will show by emples how the interaction will flow for a user entering data and calculating their bills step-by-step. Each step involves input validation and proper user prompts to ensure correct data entry and accurate bill calculation.
 After the hotel management is presented with the menu options as below. They will be able to select the bill they want to calculate at each stage.
@@ -163,12 +179,33 @@ The lighthouse testing shows that the app runs well interms of Performance and b
 This project will be enhanced in the future by connecting it to a database to ensure we have proper CRUD operations:Create, Read, Update, Delete by connecting it to a databse or even gsheet.
 Other functionalities and user friendly UX/UI will be added to using HTML,CSS and JS for scalability.
 
+### Future Functionalities
+1. Enhanced Room Selection:
+
+__Room Availability:__ Add functionality to check room availability before booking, integrating with a backend system to manage current reservations.
+__Room Upgrades__: Offer room upgrade options based on availability during check-in.
+
+2. Detailed Billing:
+
+- __Itemized Billing:__ Provide detailed itemized bills for each category (room, restaurant, laundry, game) with individual line items.
+- __Discounts and Promotions:__ Implement functionality to apply discounts, promotional codes, and special offers.
+
+3. Customer Preferences:
+- __Profile Management:__ Allow returning customers to save their preferences and personal information for quicker future bookings.
+- __Special Requests__: Enable customers to specify special requests such as extra bedding, dietary requirements, or room amenities.
+
+4. Payment Integration:
+- __Online Payment:__ Integrate with online payment gateways to allow customers to pay their bills directly through the app.
+- __Payment Methods:__ Offer multiple payment options including credit/debit cards, mobile wallets, and bank transfers.
+5. Enhanced UX/UI:
+- __Graphical User Interface (GUI):__ Transition from a CLI to a GUI for a more modern and user-friendly experience, using frameworks like Tkinter, PyQt, or a web-based interface.
+Multi-Language Support: Provide support for multiple languages to cater to a broader audience.
+
 ## Unfixed bugs
 No unfixed bugs in the code
 ## Deployment
 The site was deployed to Heroku and can be found here.
 The step by step approach to HEROKU deployment can found in the link: [Step by step depolyment on Heroku](https://www.youtube.com/watch?v=rUSjVri4I30)
-
 
 ## Credits
 ### Media
