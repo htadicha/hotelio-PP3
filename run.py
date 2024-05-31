@@ -1,4 +1,6 @@
 import datetime
+
+
 class HotelBillCalculator:
     """
     A class to calculate hotel bills for room rent, restaurant, laundry, and game services.
@@ -21,7 +23,9 @@ class HotelBillCalculator:
         """
         Initialise the HotelBillCalculator with default or provided values.
         """
-        print("\n\nWelcome to Moyale Hotel: please enter your choice below to view total bill\n")
+        print(
+            "\n\nWelcome to Moyale Hotel: please enter your choice below to view total bill\n"
+        )
         self.room_type = room_type
         self.food_bill = food_bill
         self.game_bill = game_bill
@@ -51,17 +55,29 @@ class HotelBillCalculator:
             print("Address cannot be empty.")
             self.customer_address = input("\nEnter your address: ").strip()
 
-        self.check_in_date = input("\nEnter your check-in date: ").strip()
-        while not self.check_in_date:
-            print("Check-in date cannot be empty.")
-            self.check_in_date = input("\nEnter your check-in date: ").strip()
-
-        self.check_out_date = input("\nEnter your check-out date: ").strip()
-        while not self.check_out_date:
-            print("Check-out date cannot be empty.")
-            self.check_out_date = input("\nEnter your check-out date: ").strip()
+        self.check_in_date = self.get_valid_date(
+            "\nEnter your check-in date (YYYY-MM-DD): "
+        )
+        self.check_out_date = self.get_valid_date(
+            "\nEnter your check-out date (YYYY-MM-DD): "
+        )
 
         print("Your room number: ", self.room_number, "\n")
+
+    def get_valid_date(self, prompt):
+        """
+        Validate the input date format and ensure it is later than 2020-01-01.
+        """
+        while True:
+            date_str = input(prompt).strip()
+            try:
+                date_obj = datetime.datetime.strptime(date_str, "%Y-%m-%d")
+                if date_obj.year <= 2020:
+                    print("Date must be later than 2020-01-01.")
+                else:
+                    return date_str
+            except ValueError:
+                print("Invalid date format. Please enter in YYYY-MM-DD format.")
 
     # at each stage runninng the code to ensure we don't have majore typo or indentation error
 
@@ -304,26 +320,25 @@ def main():
         except ValueError:
             print("Invalid input. Please enter a number between 1 and 7.")
             continue
-# validate the choices to print out the bill calculator based on choices made.`
-
+        # validate the choices to print out the bill calculator based on choices made.`
 
         if choice == 1:
-           hotel_calculator.input_data()
+            hotel_calculator.input_data()
         elif choice == 2:
-           hotel_calculator.calculate_room_rent()
+            hotel_calculator.calculate_room_rent()
         elif choice == 3:
-           hotel_calculator.calculate_restaurant_bill()
+            hotel_calculator.calculate_restaurant_bill()
         elif choice == 4:
-           hotel_calculator.calculate_laundry_bill()
+            hotel_calculator.calculate_laundry_bill()
         elif choice == 5:
-           hotel_calculator.calculate_game_bill()
+            hotel_calculator.calculate_game_bill()
         elif choice == 6:
-           hotel_calculator.display_bill()
+            hotel_calculator.display_bill()
         elif choice == 7:
-           break
+            break
         else:
-           print("Invalid choice. Please enter a number between 1 and 7.")
+            print("Invalid choice. Please enter a number between 1 and 7.")
 
 
 if __name__ == "__main__":
-   main()
+    main()
