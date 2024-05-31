@@ -1,6 +1,10 @@
 ## Hotel Bill 
 ### Overview
-The Hotel Bill Calculator is a Python-based application designed to help hotels manage and calculate customer bills. The application collects customer data, calculates various charges including room rent, restaurant bills, laundry bills, and game bills, and then displays the total bill to the customer.
+The Hotel Bill Calculator is a Python-based application designed to help hotels manage and calculate customer bills. The application collects customer data, calculates various charges including room rent, restaurant bills, laundry bills, and game bills, and then displays the total bill to the customer. 
+
+The first look of the app simulates the love sandwhiches projects provided in the training module. It is a terminal run app. See below
+
+![alt text](gallery/app.png)
 
 The app once run initializes and welcomes the users to the app. It shows in writing the CRUD properties of the app.
 
