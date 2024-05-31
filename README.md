@@ -140,6 +140,9 @@ At each stage the user has the option to exit the app with the option to select 
 4. __Iphone 14:__ No issues with appearance, responsiveness, or functionality.
 4. __Iphone 15 pro and pro max:__ No issues with appearance, responsiveness, or functionality.
 ### The Lighthouse Test
+The lighthouse testing shows that the app runs well interms of Performance and best practicess is 100%.
+
+![alt text](gallery/lighthouse_test.png)
 
 ## Technologies used
 - Python
@@ -170,9 +173,8 @@ No media taken from external sources.
 - __stack_overflow:__ validation code taken from stack overflow [validation code](https://stackoverflow.com/questions/53069558/how-to-make-invalid-choice-try-again-print-if-the-user-doesnt-input-one-of-t)
 - __YouTube__ idea and inspiration taken from this youtube video which was doing calculator for electricity; 
 [YouTube](https://www.youtube.com/watch?v=sbOW1_J79rM)
-- Some validation take from the code institute training materials and love sandwhich projects.
-- date validation taken from chatGPT and google.
-- 
+- __code institute:__ Some validation take from the code institute training materials and love sandwhich projects.
+- __ChatGPT and Google__ date validation taken from chatGPT and google.
 ## Acknowledgements.
 I would like to thank:
 
