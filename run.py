@@ -132,7 +132,7 @@ class HotelBillCalculator:
     def calculate_restaurant_bill(self):
         """
         The restaurant bill will help us understand the cost of food and water at different mill time
-        we will have 1-6 options and validate the numbers and have 6 break the loop as it will be used as exit
+        we will have 1- 6 options and validate the numbers and have 6 break the loop as it will be used as exit
         1. Calculates the restaurant bill based on the items ordered and their quantities.
         2. Presents a menu of food items with corresponding charges.
         """
