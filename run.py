@@ -1,6 +1,4 @@
 import datetime
-
-
 class HotelBillCalculator:
     """
     A class to calculate hotel bills for room rent, restaurant, laundry, and game services.
@@ -87,10 +85,10 @@ class HotelBillCalculator:
         2. Presents a menu of room types with corresponding charges per night.
         """
         print("We have the following rooms for you:-")
-        print("1. Type A = euro 60 per night")
-        print("2. Type B = euro 50 per night")
-        print("3. Type C = euro 40 per night")
-        print("4. Type D = euro 30 per night")
+        print("1. Suite: = euro 60 per night")
+        print("2. Junior Suite: = euro 50 per night")
+        print("3. Double: = euro 40 per night")
+        print("4. Single: = euro 30 per night")
 
         #    use while true to validate whether the type selected btween 1-4 is a valide number
         while True:
