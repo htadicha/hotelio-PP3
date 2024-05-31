@@ -40,7 +40,7 @@ class HotelBillCalculator:
     def input_data(self):
         """
         input method for collection of customer data such as name, address, check-in date, and check-out date.
-        later in the code we will ensure the information provided for the above customer data are valide inputs for each
+        later in the code we will ensure the information provided for the above customer data are valid inputs for each
 
         """
         self.customer_name = input("\nEnter your name: ").strip()
@@ -85,12 +85,12 @@ class HotelBillCalculator:
         2. Presents a menu of room types with corresponding charges per night.
         """
         print("We have the following rooms for you:-")
-        print("1. Suite: = euro 60 per night")
-        print("2. Junior Suite: = euro 50 per night")
-        print("3. Double: = euro 40 per night")
-        print("4. Single: = euro 30 per night")
+        print("1. Suite: = euros 60 per night")
+        print("2. Junior Suite: = euros 50 per night")
+        print("3. Double: = euros 40 per night")
+        print("4. Single: = euros 30 per night")
 
-        #    use while true to validate whether the type selected btween 1-4 is a valide number
+        #    use while true to validate whether the type selected btween 1-4 is a valid number
         while True:
             try:
                 choice = int(input("Enter your choice: ").strip())
@@ -137,13 +137,13 @@ class HotelBillCalculator:
         2. Presents a menu of food items with corresponding charges.
         """
         print("RESTAURANT MENU")
-        print("1. Water = euro 2")
-        print("2. Tea = euro 3")
-        print("3. Breakfast Combo = euro 20")
-        print("4. Lunch = euro 30")
-        print("5. Dinner = euro 50")
+        print("1. Water = euros 2")
+        print("2. Tea = euros 3")
+        print("3. Breakfast Combo = euros 20")
+        print("4. Lunch = euros 30")
+        print("5. Dinner = euros 50")
         print("6. Exit")
-        # exception handling for invalide number input
+        # exception handling for invalid number input
         # number has to be between 1-6, 6 breaks and restart the choices
         # ensure that quantity is always greater than 0
         # ensure input is integer
@@ -183,11 +183,11 @@ class HotelBillCalculator:
         2.Presents a menu of laundry items with corresponding charges.
         """
         print("LAUNDRY MENU")
-        print("1. Shorts = euro 3")
-        print("2. Trousers = euro 4")
-        print("3. Shirt = euro 5")
-        print("4. Jeans = euro 6")
-        print("5. Girl Suit = euro 8")
+        print("1. Shorts = euros 3")
+        print("2. Trousers = euros 4")
+        print("3. Shirt = euros 5")
+        print("4. Jeans = euros 6")
+        print("5. Girl Suit = euros 8")
         print("6. Exit")
         # set the input to be integers and add value error using the while true statement.
         # make sure the input is only integer and takes numbers from 1-6,  ensure quantity is always greater than 0
@@ -228,11 +228,11 @@ class HotelBillCalculator:
         2. Presents a menu of games with corresponding charges per hour.
         """
         print("GAME MENU")
-        print("1. Table Tennis = euro 15 per hour")
-        print("2. Bowling = euro 20 per hour")
-        print("3. Snooker = euro 25 per hour")
-        print("4. Video Games = euro 35 per hour")
-        print("5. Pool = euro 50 per hour")
+        print("1. Table Tennis = euros 15 per hour")
+        print("2. Bowling = euros 20 per hour")
+        print("3. Snooker = euros 25 per hour")
+        print("4. Video Games = euros 35 per hour")
+        print("5. Pool = euros 50 per hour")
         print("6. Exit")
         #  will set up the game  bill to have similar condition as the rest of the bills
         # 1. must be an integer
