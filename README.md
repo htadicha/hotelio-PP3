@@ -1,6 +1,7 @@
 ## Hotel Bill 
 ### Overview
 The Hotel Bill Calculator is a Python-based application designed to help hotels manage and calculate customer bills. The application collects customer data, calculates various charges including room rent, restaurant bills, laundry bills, and game bills, and then displays the total bill to the customer. 
+ [The deployed app](https://hotelio-48430d90cea4.herokuapp.com/)
 
 The first look of the app simulates the love sandwhiches projects provided in the training module. It is a terminal run app. See below
 
@@ -206,6 +207,7 @@ No unfixed bugs in the code
 ## Deployment
 The site was deployed to Heroku and can be found here.
 The step by step approach to HEROKU deployment can found in the link: [Step by step depolyment on Heroku](https://www.youtube.com/watch?v=rUSjVri4I30)
+
 
 ## Credits
 ### Media
