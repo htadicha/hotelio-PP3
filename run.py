@@ -24,7 +24,7 @@ class HotelBillCalculator:
         Initialise the HotelBillCalculator with default or provided values.
         """
         print(
-            "\n\nWelcome to Moyale Hotel: please enter your choice below to view total bill\n"
+            "\n\nWelcome to Moyale Hotel: please enter your choice below to view total bill,\n\n\nselect Exit options to move to the next item or to stop the app.\n"
         )
         self.room_type = room_type
         self.food_bill = food_bill
@@ -87,10 +87,10 @@ class HotelBillCalculator:
         2. Presents a menu of room types with corresponding charges per night.
         """
         print("We have the following rooms for you:-")
-        print("1. Type A ----> euro 60 per night")
-        print("2. Type B ----> euro 50 per night")
-        print("3. Type C ----> euro 40 per night")
-        print("4. Type D ----> euro 30 per night")
+        print("1. Type A = euro 60 per night")
+        print("2. Type B = euro 50 per night")
+        print("3. Type C = euro 40 per night")
+        print("4. Type D = euro 30 per night")
 
         #    use while true to validate whether the type selected btween 1-4 is a valide number
         while True:
@@ -139,11 +139,11 @@ class HotelBillCalculator:
         2. Presents a menu of food items with corresponding charges.
         """
         print("RESTAURANT MENU")
-        print("1. Water -----> euro 2")
-        print("2. Tea ----->  euro 3")
-        print("3. Breakfast Combo -----> euro 20")
-        print("4. Lunch -----> euro 30")
-        print("5. Dinner -----> euro 50")
+        print("1. Water = euro 2")
+        print("2. Tea = euro 3")
+        print("3. Breakfast Combo = euro 20")
+        print("4. Lunch = euro 30")
+        print("5. Dinner = euro 50")
         print("6. Exit")
         # exception handling for invalide number input
         # number has to be between 1-6, 6 breaks and restart the choices
@@ -185,11 +185,11 @@ class HotelBillCalculator:
         2.Presents a menu of laundry items with corresponding charges.
         """
         print("LAUNDRY MENU")
-        print("1. Shorts -----> euro 3")
-        print("2. Trousers -----> euro 4")
-        print("3. Shirt -----> euro 5")
-        print("4. Jeans -----> euro 6")
-        print("5. Girl Suit -----> euro 8")
+        print("1. Shorts = euro 3")
+        print("2. Trousers = euro 4")
+        print("3. Shirt = euro 5")
+        print("4. Jeans = euro 6")
+        print("5. Girl Suit = euro 8")
         print("6. Exit")
         # set the input to be integers and add value error using the while true statement.
         # make sure the input is only integer and takes numbers from 1-6,  ensure quantity is always greater than 0
@@ -230,11 +230,11 @@ class HotelBillCalculator:
         2. Presents a menu of games with corresponding charges per hour.
         """
         print("GAME MENU")
-        print("1. Table Tennis -----> euro 15 per hour")
-        print("2. Bowling -----> euro 20 per hour")
-        print("3. Snooker -----> euro 25 per hour")
-        print("4. Video Games -----> euro 35 per hour")
-        print("5. Pool -----> euro 50 per hour")
+        print("1. Table Tennis = euro 15 per hour")
+        print("2. Bowling = euro 20 per hour")
+        print("3. Snooker = euro 25 per hour")
+        print("4. Video Games = euro 35 per hour")
+        print("5. Pool = euro 50 per hour")
         print("6. Exit")
         #  will set up the game  bill to have similar condition as the rest of the bills
         # 1. must be an integer
