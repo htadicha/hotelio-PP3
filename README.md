@@ -207,23 +207,25 @@ No unfixed bugs in the code
 ## Deployment
 The site was deployed to Heroku and can be found here.
 The step by step approach to HEROKU deployment can found in the link: [Step by step depolyment on Heroku](https://www.youtube.com/watch?v=rUSjVri4I30)
+
 This site was deployed by completing the following steps:
-Log in to Heroku or create an account
-On the main page click the button labelled New in the top right corner and from the drop-down menu select Create New App
-You must enter a unique app name
-Next select your region
-Click on the Create App button
-The next page is the project’s Deploy Tab. Click on the Settings Tab and scroll down to Config Vars
-Click Reveal Config Vars and enter port into the Key box and 8000 into the Value box and click the Add button
-Click Reveal Config Vars again and enter CREDS into the Key box and the Google credentials into the Value box
-Next, scroll down to the Buildpack section click Add Buildpack select python and click Save Changes
+
+- Log in to Heroku or create an account
+- On the main page click the button labelled New in the top right corner and from the drop-down menu select Create New App
+- You must enter a unique app name
+- Next select your region
+- Click on the Create App button
+- The next page is the project’s Deploy Tab. Click on the Settings Tab and scroll down to Config Vars
+- Click Reveal Config Vars and enter port into the Key box and 8000 into the Value box and click the Add button
+- Click Reveal Config Vars again and enter CREDS into the Key box and the Google credentials into the Value box
+- Next, scroll down to the Buildpack section click Add Buildpack select python and click Save Changes
 Repeat step 8 to add node.js. o Note: The Buildpacks must be in the correct order. If not click and drag them to move into the correct order
-Scroll to the top of the page and choose the Deploy tab
-Select Github as the deployment method
-Confirm you want to connect to GitHub
-Search for the repository name and click the connect button
-Scroll to the bottom of the deploy page and select the preferred deployment type
-Click either Enable Automatic Deploys for automatic deployment when you push updates to Github
+- Scroll to the top of the page and choose the Deploy tab
+- Select Github as the deployment method
+- Confirm you want to connect to GitHub
+- Search for the repository name and click the connect button
+- Scroll to the bottom of the deploy page and select the preferred deployment type
+- Click either Enable Automatic Deploys for automatic deployment when you push updates to Github
 
 
 ## Credits
