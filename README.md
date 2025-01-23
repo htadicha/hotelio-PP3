@@ -1,6 +1,7 @@
 ## Hotel Bill 
 ### Overview
-The Hotel Bill Calculator is a Python-based application designed to help hotels manage and calculate customer bills. The application collects customer data, calculates various charges including room rent, restaurant bills, laundry bills, and game bills, and then displays the total bill to the customer. 
+The Hotel Bill Calculator is a Python-based application designed to help hotels manage in calculating customer bills,. The application collects customer data, calculates various charges including room rent, restaurant bills, laundry bills, and game bills, and then displays the total bill to the customer. The data is saved in a Google Spreadsheet for record-keeping. Additionally, administrators can edit existing entries in the spreadsheet.
+
  [The deployed app](https://hotelio-48430d90cea4.herokuapp.com/)
 
 The first look of the app simulates the love sandwhiches projects provided in the training module. It is a terminal run app. See below
@@ -43,32 +44,28 @@ Calculates the total cost of games played by the customer.
 6. __Total Bill Display:__ 
 Displays a detailed bill including all charges and the grand total. 
 
-## Class and Methods
-#### HotelBillCalculator
-This is the main class responsible for managing the hotel billing process.
+## Class/functions and Methods
 
-`__init__(self, room_type='', food_bill=0, game_bill=0, laundry_bill=0, total_bill=0, additional_charges=1, customer_name='', customer_address='', check_in_date='', check_out_date='', room_number=101)`
-The constructor initializes the class with default or provided values and prints a welcome message.
 
-`input_data(self)`
-Collects and validates customer data:
+#### the app uses reusable functions:
 
-- __customer_name:__ Must not be empty; __NOTE__ didn't validate it to be only letters because in some culture names have numbers to indicate the position the child is born in.
-- __customer_address:__ Must not be empty.
-- __check_in_date:__ Must be a valid date in the format YYYY-MM-DD and later than 2020-01-01.
-- __check_out_date:__ Must be a valid date in the format YYYY-MM-DD and later than 2020-01-01.
+**exit_or_input():** This function is used in several places to get user input and check for the "exit" command. It prevents repetitive code for input validation and termination.
 
-1. `get_valid_date(self, prompt)`
-Helper method to validate date inputs ensuring they are in the correct format and within the specified range.
+**get_valid_date():** This function prompts the user for a date input and ensures it is in the correct format. It is used in the input_data() method and can be reused anywhere else where date input is required. 
+Invalid date input shown below to user feedback
+![alt text](gallery/invalid_date.png)
 
-2. `calculate_room_rent(self)`
+**get_valid_number():** This function is used to validate numeric input and ensures that it falls within a specified range. It is reused multiple times to handle input for room rent, restaurant bills, laundry bills, game bills, etc.
+
+### additional example classes
+1. `calculate_room_rent(self)`
 Calculates the room rent based on the type of room selected and the number of nights stayed:
 
 - Suite: €60 per night
 - Junior Suite: €50 per night
 - Double: €40 per night
 - Single: €30 per night
-3. `calculate_restaurant_bill(self)`
+2. `calculate_restaurant_bill(self)`
 Calculates the restaurant bill based on the menu items ordered and their quantities:
 
 - Water: €2
@@ -76,7 +73,7 @@ Calculates the restaurant bill based on the menu items ordered and their quantit
 - Breakfast Combo: €20
 - Lunch: €30
 - Dinner: €50
-4. `calculate_laundry_bill(self)`
+3. `calculate_laundry_bill(self)`
 Calculates the laundry bill based on the items and their quantities:
 - Shorts: €3
 - Trousers: €4
@@ -84,7 +81,7 @@ Calculates the laundry bill based on the items and their quantities:
 - Jeans: €6
 - Girl Suit: €8
 
-5. `calculate_game_bill(self)`
+4. `calculate_game_bill(self)`
 Calculates the game bill based on the games played and the number of hours spent:
 
 - Table Tennis: €15 per hour
@@ -144,6 +141,20 @@ Data is stored in the following columns:
 8. Game Bill
 9. Total Bill
 ![alt text](gallery/sheet_column.png)
+
+## User feedback implimented
+![alt text](gallery/user_feedback.png)
+![alt text](gallery/user_feedback1.png)
+
+## Sheet update based on information entry
+![alt text](gallery/sheet_update.png)
+## editing sheet entry:
+***updating sheet info from program***
+![alt text](gallery/updated_row.png)
+***updated roow results***
+![alt text](gallery/updated_sheet.png)
+
+
 **Editing Existing Records in the spreadsheet:**
 Users can edit any entry in the Google Sheets by specifying the row number. The application allows modifications to customer data and charges, and the updated data is written back to the Google Sheet.  Google Sheets account and proper API credentials to connect the app and Google Sheet have been put in the code.
 ## Exit Option:
