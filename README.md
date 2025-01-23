@@ -107,42 +107,52 @@ The main function that runs the Hotel Bill Calculator. It provides a menu-driven
 4. Calculate laundry bill
 5. Calculate game bill
 6. Show total cost
+
 7. Exit the application
+## Features
+**Customer Data Input:**
+- Prompt the user for essential customer details such as:
+  - Name
+  - Address
+  - Check-in Date
+  - Check-out Date
+- The app validates these inputs to ensure they meet the required format.
+**Room Rent Calculation:**
+- The administrator can select from the following room types:
+   - Standard – 1000 per day
+   - Deluxe – 2000 per day
+   - Suite – 3000 per day
+- The app multiplies the selected room’s daily rate by the number of stay days to calculate the room rent.
+**Charges Calculation:**
+- **Restaurant Bill:** The user is prompted to input the total amount spent at the restaurant.
+- **Laundry Bill:** The user is prompted to input the total laundry expenses.
+- **Game Bill:** The user is prompted to input the total bill for any games or recreational activities during the stay.
 
-## Menu Options:
-Below is the main option and also will show by emples how the interaction will flow for a user entering data and calculating their bills step-by-step. Each step involves input validation and proper user prompts to ensure correct data entry and accurate bill calculation.
-After the hotel management is presented with the menu options as below. They will be able to select the bill they want to calculate at each stage.
+## Bill Summary:**
+- Once all charges are entered, the system generates a summary that includes:
+  - Customer's name, address
+  - Check-in date and check-out date
+  - Detailed list of room rent, restaurant bill, laundry bill, and game bill
+  - Total bill (sum of all charges)
+## Google Sheets Integration:
+The application saves the data directly into a Google Sheet. Each guest's information is stored in a new row in the Total Expenditure worksheet.
+Data is stored in the following columns:
+1. Customer Name
+2. Customer Address
+3. Check-in Date
+4. Check-out Date
+5. Room Rent
+6. Restaurant Bill
+7. Laundry Bill
+8. Game Bill
+9. Total Bill
 
-![alt text](gallery/menu_options.png)
+**Editing Existing Records in the spreadsheet:**
+Users can edit any entry in the Google Sheets by specifying the row number. The application allows modifications to customer data and charges, and the updated data is written back to the Google Sheet.  Google Sheets account and proper API credentials to connect the app and Google Sheet have been put in the code.
+## Exit Option:
+The user can exit the application at any time by typing "exit" when prompted.
 
-1. Enter Customer Data: Collects and validates customer details.
 
-![alt text](/gallery/customer_data.png)
-2. Calculate Room Rent: Calculates the room rent based on user input.
-
-![alt text](gallery/room_rent.png)
-
-3. Calculate Restaurant Bill: Adds items to the restaurant bill based on user input.
-
-![alt text](gallery/restaurant_bill.png)
-
-4. Calculate Laundry Bill: Adds items to the laundry bill based on user input.
-
-![alt text](gallery/Laundry_bill.png)
-
-5. Calculate Game Bill: Adds items to the game bill based on user input.
-
-![alt text](gallery/game_bill.png)
-
-6. Show Total Cost: Displays the detailed bill including all charges.
-
-![alt text](gallery/Total_bill.png)
-
-7. EXIT: Exits the application.
-At each stage the user has the option to exit the app with the option to select for exit.
-
-![alt text](gallery/exit_option.png)
- 
  ## Testing
  ### Validator testing
 - No error were returned when passing through the official [Etend class Python validator](https://extendsclass.com/python-tester.html) when direct text is used. 
@@ -175,6 +185,20 @@ The lighthouse testing shows that the app runs well interms of Performance and b
 - Google
 - ChatGPT
 - Stack-overflow
+
+## Dependencies:
+1. Python 3.x
+2. gspread library (Google Sheets API)
+3. oauth2client library (authentication with Google Sheets API)
+
+### Google API Setup:
+1. **Create a project on Google Cloud Console:** Go to Google Cloud Console, create a new project or select an existing one.
+
+2. **Enable Google Sheets API and Google Drive API:** Navigate to APIs & Services > Library, search for Google Sheets API and Google Drive API, and enable both.
+
+4. **Create Service Account Credentials:**In APIs & Services > Credentials, create a service account. Download the credentials as a JSON file (commonly named creds.json).
+
+5. **Share Google Sheet with Service Account:**Open your Google Sheet (make sure it has a worksheet named "Total Expenditure") and share it with the email in the service account credentials file.
 
 ## Future development
 This project will be enhanced in the future by connecting it to a database to ensure we have proper CRUD operations:Create, Read, Update, Delete by connecting it to a databse or even gsheet.
