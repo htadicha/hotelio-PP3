@@ -143,7 +143,9 @@ Data is stored in the following columns:
 ![alt text](gallery/sheet_column.png)
 
 ## User feedback implimented
+***implimented user feedback for successful data entry***
 ![alt text](gallery/user_feedback.png)
+***implimented user feedback for exiting the program***
 ![alt text](gallery/user_feedback1.png)
 
 ## Sheet update based on information entry
