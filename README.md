@@ -9,9 +9,6 @@ The first look of the app simulates the love sandwhiches projects provided in th
 
 The app once run initializes and welcomes the users to the app. It shows in writing the CRUD properties of the app.
 
-example:
-
-![alt text](gallery/app_initialize.png)
 
 ## UX/UI Design of the Hotel Bill Calculator App
 1. User Experience (UX) Considerations:
@@ -146,7 +143,7 @@ Data is stored in the following columns:
 7. Laundry Bill
 8. Game Bill
 9. Total Bill
-
+![alt text](gallery/sheet_column.png)
 **Editing Existing Records in the spreadsheet:**
 Users can edit any entry in the Google Sheets by specifying the row number. The application allows modifications to customer data and charges, and the updated data is written back to the Google Sheet.  Google Sheets account and proper API credentials to connect the app and Google Sheet have been put in the code.
 ## Exit Option:
