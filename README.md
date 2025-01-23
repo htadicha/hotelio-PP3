@@ -32,7 +32,7 @@ example:
 
 - __Readability:__ The text is simple and concise, ensuring that users can easily read and understand the information presented. The use of line breaks and spacing helps to separate different sections of the output for better readability.
 
-### Features
+### app details
 1. __Customer Data Collection:__
 Collects customer's name, address, check-in date, and check-out date.
 2. __Room Rent Calculation:__ 
@@ -128,7 +128,7 @@ The main function that runs the Hotel Bill Calculator. It provides a menu-driven
 - **Laundry Bill:** The user is prompted to input the total laundry expenses.
 - **Game Bill:** The user is prompted to input the total bill for any games or recreational activities during the stay.
 
-## Bill Summary:**
+## Bill Summary:
 - Once all charges are entered, the system generates a summary that includes:
   - Customer's name, address
   - Check-in date and check-out date
