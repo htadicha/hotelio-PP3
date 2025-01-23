@@ -1,4 +1,5 @@
 import re
+import os
 from datetime import datetime
 import sys
 import gspread
@@ -17,13 +18,8 @@ class HotelBillCalculator:
         self.restaurant_bill = 0
         self.laundry_bill = 0
         self.game_bill = 0
-
-        # Google Sheets setup
-        # scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-        # creds = ServiceAccountCredentials.from_json_keyfile_name('creds.json', scope)
-        # self.client = gspread.authorize(creds)
-        # self.sheet = self.client.open("Hotelio").worksheet("Total Expenditure")
         
+
 
         SCOPE = ["https://www.googleapis.com/auth/spreadsheets","https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
 
