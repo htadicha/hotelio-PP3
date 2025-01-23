@@ -151,8 +151,11 @@ Data is stored in the following columns:
 ## Sheet update based on information entry
 ![alt text](gallery/sheet_update.png)
 ## editing sheet entry:
+
 ***updating sheet info from program***
+
 ![alt text](gallery/updated_row.png)
+
 ***updated roow results***
 ![alt text](gallery/updated_sheet.png)
 
